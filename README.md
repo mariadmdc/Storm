@@ -1,4 +1,4 @@
-# Storm
+# Storm ⚡
 
 CMSI 3802: Languages and Automata II
 

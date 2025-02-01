@@ -3,7 +3,7 @@ set laps to 0
 start lap forever
     set laps to laps + 1
     say "You are on lap " + laps
-    if laps == 4
+    if laps = 4
         say "You finished 4 laps! You completed the mile!"
         stop running
     lap

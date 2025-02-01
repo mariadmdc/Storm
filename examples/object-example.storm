@@ -13,4 +13,4 @@ set object Animal()
 end object
 
 Doggy = Animal(species as "dog", name as "Max", personality as "playful")
-Doggy.getInformation
+Doggy.getInformation()

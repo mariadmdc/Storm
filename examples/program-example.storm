@@ -1,9 +1,9 @@
 # do (function) example - pizza counter
-do countSlices(people)
+set program countSlices(people)
     set slicesEach to 2
     set totalSlicesNeeded to people * slicesEach
     say "You need " + totalSlicesNeeded + " slices of pizza for " + people + " people!"
-end do
+end program
 
 run countSlices(10)   # Call the function for 10 people
 run countSlices(20)   # Call the function for 20 people 

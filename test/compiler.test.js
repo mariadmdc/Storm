@@ -1,8 +1,9 @@
 import { describe, it } from "node:test";
 import { deepEqual } from "node:assert/strict";
+import { starter } from "../src/Storm.js";  
 
-describe("Test", () => {
-    it("should assert that 1 equals 1", () => {
-      deepEqual(1, 1);
-    });
+describe("starter function", () => {
+  it("should return 'hello, world'", () => {
+    deepEqual(starter(), "hello, world");
   });
+});

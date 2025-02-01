@@ -1,4 +1,4 @@
-# do (function) example - pizza counter
+# program (function) example - pizza counter
 set program countSlices(people)
     set slicesEach to 2
     set totalSlicesNeeded to people * slicesEach

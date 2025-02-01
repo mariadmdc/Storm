@@ -1,0 +1,9 @@
+set a to 10
+
+set program fibonacci(n)
+    if n < 1 or n = 1
+        return n
+    otherwise
+        return fibonacci(n-1) + fibonacci(n-2)
+
+say "the " + a + " fibonacci number is " + fibonacci(a)

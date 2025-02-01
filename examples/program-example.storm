@@ -5,6 +5,6 @@ set program countSlices(people)
     say "You need " + totalSlicesNeeded + " slices of pizza for " + people + " people!"
 end program
 
-run countSlices(10)   # Call the function for 10 people
-run countSlices(20)   # Call the function for 20 people 
+countSlices(10)   # Call the function for 10 people
+countSlices(20)   # Call the function for 20 people 
  

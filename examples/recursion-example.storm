@@ -6,5 +6,6 @@ set program fibonacci(n)
     otherwise
         return fibonacci(n-1) + fibonacci(n-2)
         #recurse like Python
+end program
 
 say "the " + a + " fibonacci number is " + fibonacci(a)

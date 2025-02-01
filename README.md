@@ -1,4 +1,4 @@
-# Storm ⚡ ![alt text](image.png)
+# Storm ⚡ <img src="image.png" alt="alt text" width="30" style="vertical-align: middle;">
 
 CMSI 3802: Languages and Automata II
 

@@ -1,12 +1,12 @@
 set object Animal()
     
-    new program traits(species,name,personality)
+    set program traits(species,name,personality)
         set Animal.species as species
         set Animal.name as name
         set Animal.personality as personality
     end program
 
-    new program getInformation()
+    set program getInformation()
         say Animal.name + " is a " + Animal.species + " and is very " + Animal.personality
     end program
 

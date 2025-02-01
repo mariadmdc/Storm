@@ -1,4 +1,4 @@
-# Storm ⚡ ![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/jackseymour/Documents/School/LMU/Spring%202025/Languages%20and%20Automata%202/Storm/stormlogo.jpg?version%3D1738446127940)
+# Storm ⚡ ![alt text](image.png)
 
 CMSI 3802: Languages and Automata II
 

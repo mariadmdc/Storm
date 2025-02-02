@@ -1,0 +1,16 @@
+set object Animal()
+    
+    set program traits(species,name,personality)
+        set Animal.species as species
+        set Animal.name as name
+        set Animal.personality as personality
+    end program
+
+    set program getInformation()
+        say Animal.name + " is a " + Animal.species + " and is very " + Animal.personality
+    end program
+
+end object
+
+Doggy = Animal(species as "dog", name as "Max", personality as "playful")
+Doggy.getInformation()

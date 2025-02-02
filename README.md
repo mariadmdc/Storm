@@ -8,4 +8,7 @@ Storm is a high-level, object oriented programming language brought to you by Ja
 
 ## Features
 
+Storm is statically types, requiring the users to declare any variables, functions, or classes. To declare a new instance of *anything*, simply state `set...` (similar to `var` in other languages). We require the user to state the ending of loops, functions, or classes. In addition, instead of a "for loop", we refer to them as "laps". Lastly, to avoid the complexity of input streams in low high-level langaues, simply use "ask" to substitute.
+
 ## Examples of Programs
+> `

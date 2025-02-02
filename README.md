@@ -32,3 +32,16 @@ end program
 countSlices(10)   # Call the function for 10 people
 countSlices(20)   # Call the function for 20 people
 ```
+
+Similarly, an example of our laps functionality is seen below:
+```
+# infinite lap (loop) example
+set laps to 0
+start lap forever
+    set laps to laps + 1
+    say "You are on lap " + laps
+    if laps = 4
+        say "You finished 4 laps! You completed the mile!"
+        stop running
+    lap
+```

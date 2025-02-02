@@ -1,5 +1,5 @@
-set pi as 3.14
-set r as ask "What is the radius of your circle"
+set pi to 3.14
+set r to ask "What is the radius of your circle"
 
 set program circle(radius)
     say "Your circle's area is " + pi*radius^2 + "."

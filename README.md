@@ -21,7 +21,6 @@ Five example programs can be found the the examples folder, including:
 
 
 For instance, `program-example.storm` looks like:
->
 ```
  # program (function) example - pizza counter
 set program countSlices(people)

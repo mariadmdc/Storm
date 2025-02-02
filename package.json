@@ -1,7 +1,7 @@
 {
     "name": "storm",
     "version": "1.0.0",
-    "description": "A programming language targeted to children who wish to learn their coding for the first time.",
+    "description": "A programming language targeted to children who wish to learn coding for the first time.",
     "type": "module",
     "main": "src/storm.js",
     "scripts": {

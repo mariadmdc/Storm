@@ -1,9 +1,9 @@
 set object Animal()
     
     set program traits(species,name,personality)
-        set Animal.species as species
-        set Animal.name as name
-        set Animal.personality as personality
+        set Animal.species to species
+        set Animal.name to name
+        set Animal.personality to personality
     end program
 
     set program getInformation()
@@ -12,5 +12,5 @@ set object Animal()
 
 end object
 
-Doggy = Animal(species as "dog", name as "Max", personality as "playful")
+Doggy = Animal(species to "dog", name to "Max", personality to "playful")
 Doggy.getInformation()

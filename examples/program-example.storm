@@ -7,4 +7,3 @@ end program
 
 countSlices(10)   # Call the function for 10 people
 countSlices(20)   # Call the function for 20 people 
- 

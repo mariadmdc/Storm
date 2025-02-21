@@ -1,0 +1,112 @@
+Storm {
+  Program       = Statement*
+
+  // A statement can be a variable declaration, function declaration,
+  // object declaration, loop, conditional, output, stop command,
+  // an expression statement, or a comment.
+  Statement
+    = VarDecl
+    | FunctionDecl
+    | ObjectDecl
+    | LoopStmt
+    | IfStmt
+    | SayStmt
+    | StopStmt
+    | ExpressionStmt
+    | Comment
+
+  // Variable (or member) declaration/assignment:
+  VarDecl       = "set" __ LHS __ "to" __ Expression
+
+  // Function declaration:
+  FunctionDecl  = "set" __ "program" __ identifier "(" ParameterList? ")" _ Block _ "end" __ "program"
+
+  // Object declaration (similar to classes):
+  ObjectDecl    = "set" __ "object" __ identifier "(" ParameterList? ")" _ Block _ "end" __ "object"
+
+  // Loop construct (called a “lap”):
+  LoopStmt      = "start" __ "lap" __ LoopModifier _ Block _ "lap"
+  LoopModifier  = "forever"    --forever
+                | Expression     --conditionBased
+
+  // Conditional: the body is given as a block (with no explicit end)
+  IfStmt        = "if" __ Expression _ Block
+
+  // Output statement:
+  SayStmt       = "say" __ Expression
+
+  // Stop statement (e.g., to break out of a loop):
+  StopStmt      = "stop" __ "running"
+
+  // An expression as a statement (such as a function call or method call)
+  ExpressionStmt = Expression
+
+  // A block is simply a sequence of statements.
+  Block         = Statement*
+
+  // The left-hand side for assignments: a simple identifier or a property access.
+  LHS           = identifier ("." identifier)*
+
+  /////////////////////////////////
+  // Expressions and Operators
+  /////////////////////////////////
+
+  Expression    = AddExp
+
+  AddExp = MulExp ( _ ("+" | "-") _ MulExp )*
+  MulExp = PowExp ( _ ("*" | "/") _ PowExp )*
+  PowExp = PrimaryExp ( _ "^" _ PowExp )?
+  PrimaryExp = Postfix
+
+  Postfix     = Atom PostfixTail*
+  PostfixTail
+    = CallTail
+    | PropTail
+
+  // A call tail is an argument list in parentheses.
+  CallTail    = "(" _ CallArgList? _ ")"
+  // A property tail is a dot followed by an identifier.
+  PropTail    = "." identifier
+
+  // Call arguments can be either a named argument or a positional argument.
+  CallArgList = ListOf<CallArg, comma>
+  CallArg     = NamedCallArg | PositionalCallArg
+  NamedCallArg = identifier __ "to" __ Expression
+  PositionalCallArg = Expression
+
+  // Parameter list for function and object declarations.
+  ParameterList = ListOf<identifier, comma>
+
+  /////////////////////////////////
+  // Atoms and Basic Tokens
+  /////////////////////////////////
+
+  Atom
+    = NumberLiteral
+    | StringLiteral
+    | AskLiteral
+    | identifier
+    | ParenExp
+
+  NumberLiteral = number
+  StringLiteral = string
+  AskLiteral    = "ask" __ string
+  ParenExp      = "(" _ Expression _ ")"
+
+  // A comment starts with '#' and goes until the end of the line.
+  Comment     = "#" (~"\n" any)* "\n"
+
+  /////////////////////////////////
+  // Lexical Rules
+  /////////////////////////////////
+
+  number      = digit+ ("." digit+)?
+  string      = "\"" (~"\"" any)* "\""  
+  identifier  = letter alnum*
+  comma       = ","
+
+  // Whitespace and spacing helpers
+  _  = spacing*
+  __ = spacing+
+  spacing = " " | "\t" | "\n"
+}

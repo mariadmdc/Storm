@@ -3,7 +3,7 @@ import * as ohm   from "ohm-js";
 import analyze    from "./analyzer.js";
 
 const grammar = ohm.grammar(
-  fs.readFileSync("src/storm.ohm", "utf8")
+  fs.readFileSync("src/Storm.ohm", "utf8")
 );
 
 export default function parse(sourceCode) {

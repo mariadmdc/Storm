@@ -46,3 +46,56 @@ start lap forever
     end if
 lap
 ```
+
+A longer script that includes multiple functionalities is seen here:
+
+```
+set program quizGame()
+    set questions to 3
+    set current to 1
+    set score to 0
+
+    say "Welcome to the Quiz Game! Answer " + questions + " questions."
+
+    start lap current <= questions
+        if current = 1
+            set response to ask "Q1) What is the capital of France?"
+            if response = "Paris"
+                say "Correct!"
+                set score to score + 1
+            else
+                say "Oops, the answer is Paris."
+            end if
+
+        else
+            if current = 2
+                set response to ask "Q2) What is 5 × 6?"
+                if response = 30
+                    say "Correct!"
+                    set score to score + 1
+                else
+                    say "No—it's 30."
+                end if
+
+            else
+                # current = 3
+                set response to ask "Q3) Which planet is known as the Red Planet?"
+                if response = "Mars"
+                    say "Correct!"
+                    set score to score + 1
+                else
+                    say "Wrong, it's Mars."
+                end if
+
+            end if
+        end if
+
+        set current to current + 1
+    lap
+
+    say "Quiz over! You scored " + score + " out of " + questions + "."
+end program
+
+quizGame()
+```
+

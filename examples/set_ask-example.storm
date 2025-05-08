@@ -1,0 +1,7 @@
+set c to ask "Enter temperature in °C:"
+set program toFahrenheit(celsius)
+    set fahr to celsius * 9 / 5 + 32
+    say celsius + "°C is " + fahr + "°F."
+end program
+
+toFahrenheit(c)

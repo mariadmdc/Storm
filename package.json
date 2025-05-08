@@ -6,7 +6,8 @@
     "main": "src/storm.js",
     "scripts": {
         "test": "c8 node --test test/**/*.test.js",
-        "test:grammar": "jest grammar.test.js"
+        "test:grammar": "jest test/grammar.test.js --watchAll=false",
+    "test:analyzer": "jest test/analyzer.test.js --watchAll=false"
     },
     "keywords": [],
     "author": "Jack Seymour, Lydia Worku, Gavin Butts, Jacquelyn Young-Bowers, and Maria Dominguez",

@@ -1,0 +1,8 @@
+set object Person(name, age)
+    set program introduce()
+        say "Hi, I’m " + Person.name + " and I’m " + Person.age + " years old."
+    end program
+end object
+
+set p to Person(name to "Alice", age to 30)
+p.introduce()

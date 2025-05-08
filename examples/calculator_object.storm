@@ -1,0 +1,14 @@
+set object Calculator()
+    set program add(x, y)
+        set res to x + y
+        say "Sum: " + res
+    end program
+    set program multiply(x, y)
+        set res to x * y
+        say "Product: " + res
+    end program
+end object
+
+set calc to Calculator()
+calc.add(7, 8)
+calc.multiply(6, 9)

@@ -1,0 +1,53 @@
+set program todoManager()
+    set todos to []                # We’ll treat [] as an empty list
+    set running to true
+
+    say "Welcome to To-Do Manager!"
+    start lap running
+        say "\nMenu:\n1) Add task\n2) Remove task\n3) List tasks\n4) Exit"
+        set choice to ask "Choose an option (1–4):"
+
+        if choice = 1
+            set task to ask "Enter task description:"
+            todos = todos + [task]      # Append to list
+            say "Added: " + task
+
+        else if choice = 2
+            if todos = []
+                say "No tasks to remove."
+            else
+                say "Current tasks:"
+                set idx to 1
+                start lap idx <= length(todos)
+                    say idx + ") " + todos[idx]
+                    set idx to idx + 1
+                lap
+                set rem to ask "Enter task number to remove:"
+                if rem >= 1 and rem <= length(todos)
+                    todos = todos[1:rem-1] + todos[rem+1:length(todos)]
+                    say "Removed task " + rem
+                else
+                    say "Invalid index."
+                end if
+            end if
+
+        else if choice = 3
+            if todos = []
+                say "Your to-do list is empty."
+            else
+                say "Your tasks:"
+                set idx to 1
+                start lap idx <= length(todos)
+                    say idx + ") " + todos[idx]
+                    set idx to idx + 1
+                lap
+            end if
+
+        else
+            say "Goodbye!"
+            stop running
+        end if
+    lap
+end program
+
+todoManager()

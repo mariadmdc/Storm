@@ -101,4 +101,22 @@ quizGame()
 
 ## Navigating the Project
 
+This project has 4 key folders.    
+
+To find examples of programs executable by the program, see
+> /examples
+
+To find the inner machinery, including the grammer (/Storm.ohm), the analyzer (/analyzer.js), the compiler (\compiler.js), the generator (/generator.js), the optimizer.js (/optimizer.js), and the parser (/parser.js), see
+> /src
+
+To find the tests for the main computational force behind Storm, see
+> /test
+
+If you want to see our cute faces, see
+> /docs
+
+
+
+
+
 

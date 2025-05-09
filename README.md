@@ -115,7 +115,9 @@ To find the tests for the main computational force behind Storm, see
 If you want to see our cute faces, see
 > /docs
 
+## Grammar
 
+If you're particularly nosey and would like to see our grammar, look [here](https://github.com/mariadmdc/Storm/blob/main/src/Storm.ohm)
 
 
 

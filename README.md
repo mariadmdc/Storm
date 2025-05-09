@@ -99,3 +99,6 @@ end program
 quizGame()
 ```
 
+## Navigating the Project
+
+
